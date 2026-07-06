@@ -61,6 +61,7 @@ function protectApkAccess(req, res, next) {
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(protectApkAccess);
+app.get('/', (req, res) => res.redirect('/tasks.html'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/apks', apksRouter);
 app.use('/api/tasks', tasksRouter);
