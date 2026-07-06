@@ -1,9 +1,14 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 8081;
+
+// Enable CORS for development: allow dynamic origin and credentials
+app.use(cors({ origin: true, credentials: true }));
+app.options('*', cors({ origin: true, credentials: true }));
 
 const UPLOAD_DIR = path.join(__dirname, 'uploads');
 const DATA_DIR = path.join(__dirname, 'data');
