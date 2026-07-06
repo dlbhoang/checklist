@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Đăng nhập APK</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>Đăng nhập APK</h1>
+        <p class="subtitle">Chỉ BodanDuong mới được phép vào /apk.html</p>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <form class="login-form" action="/login" method="post">
+          <label>
+            Tên đăng nhập
+            <input type="text" name="username" autocomplete="username" required />
+          </label>
+          <label>
+            Mật khẩu
+            <input type="password" name="password" autocomplete="current-password" required />
+          </label>
+          <button type="submit" class="btn-primary">Đăng nhập</button>
+          <p class="login-note">Tên đăng nhập: <strong>BodanDuong</strong>, mật khẩu: <strong>BoDanDuong</strong></p>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="shared.js"></script>
+</body>
+</html>
