@@ -3,36 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>APK Dashboard</title>
+<title>Checklist công việc</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="app">
     <header class="topbar">
       <div>
-        <h1>📦 APK Dashboard</h1>
-        <p class="subtitle">Chọn một phần để xem: quản lý APK hoặc checklist công việc.</p>
+        <h1>Checklist</h1>
+        <p class="subtitle">Quản lý công việc riêng biệt</p>
       </div>
       <button id="themeToggle" class="icon-btn" title="Đổi giao diện sáng/tối">🌙</button>
     </header>
 
     <main class="content">
       <section class="card">
-        <h2>APK Dashboard</h2>
-        <p>Upload, xem và quản lý file APK riêng biệt.</p>
-        <a class="btn-primary btn-link" href="/apk.html">Mở APK Dashboard</a>
+        <h2>Thêm công việc</h2>
+        <form id="taskForm" class="task-form">
+          <input type="text" id="taskInput" placeholder="Thêm công việc mới..." autocomplete="off" />
+          <button type="submit" class="btn-primary">Thêm</button>
+        </form>
+
+        <ul id="taskList" class="task-list"></ul>
       </section>
 
       <section class="card">
-        <h2>Checklist công việc</h2>
-        <p>Quản lý checklist công việc riêng, không trộn với APK.</p>
-        <a class="btn-primary btn-link" href="/tasks.html">Mở Checklist</a>
+        <a class="btn-primary btn-link" href="/">Quay lại trang chính</a>
       </section>
     </main>
   </div>
 
   <div id="toast" class="toast hidden"></div>
-
   <script src="shared.js"></script>
+  <script src="tasks.js"></script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>APK Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>APK Dashboard</h1>
+        <p class="subtitle">Quản lý file APK</p>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="Đổi giao diện sáng/tối">🌙</button>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <h2>Upload APK</h2>
+
+        <div id="dropZone" class="drop-zone">
+          <input type="file" id="fileInput" accept=".apk" hidden />
+          <div class="drop-zone__hint">
+            <span class="drop-zone__icon">⬆️</span>
+            <p>Kéo & thả file .apk vào đây, hoặc bấm để chọn file</p>
+          </div>
+          <div id="progressWrap" class="progress-wrap hidden">
+            <div id="progressBar" class="progress-bar"></div>
+            <span id="progressText">0%</span>
+          </div>
+        </div>
+
+        <div id="apkList" class="apk-list">
+          <p class="empty-hint">Chưa có file APK nào được upload.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <a class="btn-primary btn-link" href="/">Quay lại trang chính</a>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="shared.js"></script>
+  <script src="apk.js"></script>
+</body>
+</html>

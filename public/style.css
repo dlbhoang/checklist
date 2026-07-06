@@ -54,6 +54,25 @@ body {
   margin: 0;
 }
 
+.topbar .subtitle {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.text-link,
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-link {
+  width: fit-content;
+}
+
 .icon-btn {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
